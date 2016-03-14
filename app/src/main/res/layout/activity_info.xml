@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.learning.suman.rsr.InfoActivity"
+    android:id="@+id/ilt">
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:id="@+id/infoHomeButton"
+        android:onClick="rsrHomePageLoad"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Over RSR"
+        android:textSize="16dp"
+        android:background="#ff2cc2ff"
+        android:drawableLeft="@mipmap/arrowbtn"
+        android:textColor="#ffffff"
+        android:gravity="left|center_vertical" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/info_bg"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/infoHomeButton"
+        android:layout_alignParentTop="@+id/infoHomeButton"
+        android:adjustViewBounds="false" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_below="@+id/imageView"
+        android:background="#ff1ea1ff" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:id="@+id/infoTextView"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignParentBottom="true"
+        android:textSize="16dp"
+        android:text="@string/rsrInfo"
+        android:paddingTop="5dp"
+        android:textColor="#000000" />
+
+
+</RelativeLayout>

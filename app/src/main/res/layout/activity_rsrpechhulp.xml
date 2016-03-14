@@ -1,0 +1,96 @@
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.learning.suman.rsr.RSRpechhulp"
+    >
+<Button
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/RSRHomeButton"
+    android:onClick="rsrHomePageLoadPechhulpPage"
+    android:drawableLeft="@mipmap/arrowbtn"
+    android:text="RSR Pechhulp"
+    android:background="#ff1ea1ff"
+    android:gravity="left|center_vertical"
+    android:drawablePadding="-10dp"
+    android:textColor="#ffffff" />
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="385dp"
+    android:layout_height="520dp"
+    android:id="@+id/map"
+    tools:context="com.learning.suman.rsr.RSRpechhulp"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_below="@+id/RSRHomeButton">
+
+</fragment>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:id="@+id/locnPopUpBtn"
+            android:background="@mipmap/locnpopup"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="130dp"
+            android:text="Uw locatie: Onthoud deze locatie for het telephinishgesprek "
+            android:textColor="#ffffff"
+            android:textSize="10dp"
+            android:textAlignment="gravity"
+            android:padding="2dp"
+            android:gravity="top|center_horizontal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/closeBtn"
+            android:text="X Annuleren"
+            android:layout_marginTop="255dp"
+            android:layout_marginLeft="23dp"
+            android:textColor="#ffffff"
+
+            android:visibility="invisible"
+            android:background="#ff1ea1ff" />
+        <!--android:drawableLeft="@mipmap/ic_closebtn"-->
+        <TextView
+            android:layout_width="259dp"
+            android:layout_height="205dp"
+            android:text="@string/alert_msg"
+            android:layout_marginTop="300dp"
+            android:layout_marginLeft="23dp"
+            android:background="#661331ff"
+            android:focusable="false"
+            android:textColor="#ffffff"
+            android:visibility="invisible"
+            android:id="@+id/msgTextView"
+            android:textSize="18dp" />
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/belRSRNuButton"
+            android:text="Bel RSR nu"
+            android:layout_marginTop="450dp"
+            android:background="#ff1ea1ff"
+            android:layout_marginLeft="25dp"
+            android:drawableLeft="@mipmap/phonebtnsec"
+            android:gravity="center_vertical"
+            android:textColor="#FFFFFF" />
+
+
+
+
+     </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
