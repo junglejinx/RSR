@@ -5,12 +5,34 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_rsrpechhulp">RSR pechhulp</string>
     <string name="title_activity_info">InfoActivity</string>
-    <string name="rsrInfo">Welzorg heeft het meest complete en hoogwaardige aanbod van Nederland op het gebeid van <a href="https://www.welzorg.nl/mobiliteit/" >mobilitiet</a>, <a href="https://www.welzorg.nl/wonen/"> wonen </a>, en vitalitiet.
+    <string name="rsr_info">Welzorg heeft het meest complete en hoogwaardige aanbod van Nederland op het gebeid van <a href="https://www.welzorg.nl/mobiliteit/" >mobilitiet</a>, <a href="https://www.welzorg.nl/wonen/"> wonen </a>, en vitalitiet.
                 Daarom kunnen wij u altijd de beste oplossing bieden voor uw persoonlijke situatie. Of het nu gaat om een korte of lange periode,
                 een eenvoudige of complexe vraag. Onze hulpmiddelen kunt u gratis <a href="https://www.welzorg.nl/lenen/"> lenen </a>,<a href="https://www.welzorg.nl/huren/"> huren </a> of <a href="https://www.welzorg.nl/kopen/"> kopen</a>. Is een hulpmiddel alleen niet voldoende?
                 Dan helpen wij u graag bij het aanpassen van uw <a href="https://www.welzorg.nl/aoto-op-maat/"> auto </a>,<a href="https://www.welzorg.nl/zorg/"> woning </a> of werkplek.</string>
-    <string name="title_activity_first_screen">FirstScreen</string>
+    <string name="title_activity_first_screen">RSR</string>
     <string name="title_activity_rsrpechhulp_map">Map</string>
-    <string name="alert_msg"><h3>Belkosten</h3><br></br>Voor dit nummer betaalt u uw gebruikelijke belkosten.</string>
+    <string name="call_btn_msg"><b>Belkosten</b>\n\nVoor dit nummer betaalt u uw gebruikelijke belkosten.</string>
     <string name="title_activity_show_location">ShowLocation</string>
+    <string name="main_page_title">RSR Revalidatieservice</string>
+    <string name="RSR_pechhulp_button_text_main_page">RSR pechhulp</string>
+
+    <string name="location_marker_message"><b>Uw locatie:</b></string>
+    <string name="location_marker_popup_info">Onthoud deze postcode voor het telefoongesprek</string>
+    <string name="title_activity_rsr">RSR</string>
+
+    <!--RSRpechhulp layout string resources-->
+    <string name="call_btn_txt"><b>Bel kosten</b></string>
+    <string name="annuleren_text">X Annuleren</string>
+    <string name="bel_btn_text">Bel RSR nu</string>
+    <string name="home_btn_text">RSR Pechhulp</string>
+
+    <!--activity_info layout strings-->
+    <string name="home_button_text_info_page">Over RSR</string>
+    <string name="image_description">RSR image</string>
+    
+    <!--rsr page strings-->
+    <string name="image_content_description">RSR icon</string>
+    <string name="image_small_content_description">RSR mini icon</string>
+
+
 </resources>

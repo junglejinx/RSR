@@ -2,49 +2,38 @@ package com.learning.suman.rsr;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.Toast;
+
 
 
 public class MainActivity extends Activity {
 
     //Defining variables
-    private static Button rsrPechhulpBtn;
-    private static Button infoBtn;
-    //GPSTracker gps;
+    protected static Button rsrPechhulpBtn;
+    protected static Button infoBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
-        //Intitializations
+        //Initialisations
         rsrPechhulpBtn=(Button)findViewById(R.id.RSRpechhulpButton);
-        infoBtn=(Button)findViewById(R.id.infoButton);
+        infoBtn=(Button)findViewById(R.id.info_button);
 
         //OnClick listener for RSRpechchulp page load
         rsrPechhulpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*gps=new GPSTracker(MainActivity.this);
-                if(gps.isCanGetLocation()){
-                    double latitude=gps.getLatitude();
-                    double longitude=gps.getLongitude();
 
-                    Toast.makeText(getApplicationContext(),"ur location. lat:" +latitude+" long: "+ longitude,Toast.LENGTH_LONG).show();
-
-                }
-
-                else{
-                    gps.showSettingsAlert();
-                }*/
-                RSRpechhulpPageLoad(v);
+                Intent RSR_pechhulp_Intent=new Intent(getApplicationContext(),RSRpechhulp.class);
+                startActivity(RSR_pechhulp_Intent);
             }
         });
 
@@ -52,7 +41,9 @@ public class MainActivity extends Activity {
         infoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                infoPageLoad(v);
+
+                Intent info_load_intent=new Intent(getApplicationContext(),InfoActivity.class);
+                startActivity(info_load_intent);
             }
         });
 
@@ -83,20 +74,7 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    //Loads Activity RSR pechhulp page
-    public void RSRpechhulpPageLoad(View view){
-        /*Intent showLocation=new Intent(this,ShowLocation.class);
-        startActivity(showLocation);*/
-        Intent i=new Intent(this,RSRpechhulp.class);
-        startActivity(i);
-    }
 
-    //Loads Information page
-    public void infoPageLoad(View view){
-        Intent i=new Intent(this,InfoActivity.class);
-        startActivity(i);
-
-    }
 }
 
 

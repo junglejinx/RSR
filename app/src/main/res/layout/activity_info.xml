@@ -3,48 +3,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.learning.suman.rsr.InfoActivity"
-    android:id="@+id/ilt">
+    android:id="@+id/info_layout">
 
+    <!-- home page button-->
     <Button
         android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:id="@+id/infoHomeButton"
-        android:onClick="rsrHomePageLoad"
+        android:layout_height="@dimen/home_button_height"
+        android:id="@+id/info_home_button"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:text="Over RSR"
-        android:textSize="16dp"
-        android:background="#ff2cc2ff"
+        android:text="@string/home_button_text_info_page"
+        android:textSize="@dimen/text_size"
+        android:background="@color/button_color"
         android:drawableLeft="@mipmap/arrowbtn"
-        android:textColor="#ffffff"
-        android:gravity="left|center_vertical" />
+        android:drawableStart="@mipmap/arrowbtn"
+        android:textColor="@color/white_text"
+        android:gravity="start|center_vertical" />
 
+
+    <!-- image displayed-->
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="250dp"
-        android:id="@+id/imageView"
+        android:layout_height="@dimen/image_height"
+        android:id="@+id/image_View"
         android:src="@drawable/info_bg"
         android:scaleType="fitXY"
-        android:layout_below="@+id/infoHomeButton"
-        android:layout_alignParentTop="@+id/infoHomeButton"
-        android:adjustViewBounds="false" />
+        android:layout_below="@+id/info_home_button"
+        android:layout_alignParentTop="@+id/info_home_button"
+        android:adjustViewBounds="false"
+        android:contentDescription="@string/image_description" />
+
+    <!--border button-->
     <Button
         android:layout_width="match_parent"
-        android:layout_height="8dp"
-        android:layout_below="@+id/imageView"
-        android:background="#ff1ea1ff" />
+        android:layout_height="@dimen/border_button_height"
+        android:layout_below="@+id/image_View"
+        android:background="@color/button_color"
+        android:id="@+id/image_text_border_button"/>
 
+    <!--display text-->
     <TextView
         android:layout_width="fill_parent"
-        android:layout_height="200dp"
-        android:id="@+id/infoTextView"
-        android:layout_alignBottom="@+id/imageView"
+        android:layout_height="@dimen/textView_height"
+        android:id="@+id/info_text_view"
+        android:layout_alignBottom="@+id/image_text_border_button"
         android:layout_alignParentBottom="true"
-        android:textSize="16dp"
-        android:text="@string/rsrInfo"
-        android:paddingTop="5dp"
-        android:textColor="#000000" />
+        android:textSize="@dimen/text_size"
+        android:text="@string/rsr_info"
+        android:paddingTop="@dimen/textView_top_padding"
+        android:textColor="@color/black_text" />
+
 
 
 </RelativeLayout>

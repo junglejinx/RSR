@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/RsrPageRelativeLayout"
+    android:id="@+id/RSR_page_relative_layout"
     tools:context=".MainActivity"
     android:background="@drawable/main_bg"
     android:layout_width="fill_parent"
@@ -12,45 +12,49 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="#ff1ea1ff">
+    android:background="@color/button_color">
 
+    <!--title display-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RSR Revalidatieservice"
-        android:id="@+id/RSRtextView"
-        android:background="#ff1ea1ff"
-        android:textColor="#ffffff"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
+        android:text="@string/main_page_title"
+        android:id="@+id/RSR_text_view"
+        android:background="@color/button_color"
+        android:textColor="@color/white_text"
+        android:layout_marginTop="@dimen/text_view_top_margin"
+        android:layout_marginLeft="@dimen/text_view_left_margin"
+        android:layout_marginStart="@dimen/text_view_start_margin"
          />
+    <!--android:layout_centerHorizontal="true"-->
 
 
-
+    <!--info page load button-->
     <Button
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/infoButton"
-        android:layout_marginLeft="120dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="@dimen/main_page_info_button"
+        android:layout_height="@dimen/main_page_info_button"
+        android:id="@+id/info_button"
+        android:layout_marginLeft="@dimen/main_page_info_button_left_margin"
+        android:layout_marginStart="@dimen/main_page_info_button_left_margin"
+        android:layout_marginTop="@dimen/main_page_info_button_top_margin"
         android:background="@mipmap/infobtn" />
+
+
 
     </LinearLayout>
 
-
+    <!--RSR pechhulp page load button-->
     <Button
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/RSR_pechhulp_button_width"
+        android:layout_height="@dimen/main_page_info_button"
         android:id="@+id/RSRpechhulpButton"
-        android:text="RSR pechhulp"
-        android:background="#ff1ea1ff"
-        android:layout_marginBottom="70dp"
+        android:text="@string/RSR_pechhulp_button_text_main_page"
+        android:background="@color/button_color"
+        android:layout_marginBottom="@dimen/rsr_button_bottom_margin"
         android:drawableLeft="@mipmap/warning"
+        android:drawableStart="@mipmap/warning"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-
-        android:textColor="#ffffff" />
+        android:textColor="@color/white_text" />
 
 </RelativeLayout>

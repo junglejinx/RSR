@@ -1,41 +1,41 @@
 package com.learning.suman.rsr;
 
 import android.app.Activity;
-import android.app.LauncherActivity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
+import android.os.Handler;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.os.Handler;
 
 
-public class FirstScreen extends Activity {
+public class RSR extends Activity {
 
+    //variable declarations
+    static int screen_time_delay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first_screen);
+        setContentView(R.layout.activity_rsr);
 
+        //variable initialization
+        screen_time_delay=3000;
         //Loads this page for 3 secs and then loads the main page
         final Handler handler= new Handler();
-          handler.postDelayed(new Runnable(){
+        handler.postDelayed(new Runnable(){
             public void run(){
-              final Intent i=new Intent(FirstScreen.this,MainActivity.class);
-              FirstScreen.this.startActivity(i);
-              FirstScreen.this.finish();
+                final Intent mainPageIntent=new Intent(RSR.this,MainActivity.class);
+                RSR.this.startActivity(mainPageIntent);
+                RSR.this.finish();
 
             }
-          },3000) ;
+        },screen_time_delay) ;
     }
-
-
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_first_screen, menu);
+        getMenuInflater().inflate(R.menu.menu_rsr, menu);
         return true;
     }
 

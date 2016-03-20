@@ -2,40 +2,45 @@ package com.learning.suman.rsr;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.text.Html;
 import android.text.method.LinkMovementMethod;
-import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.TextView;
 
 
 public class InfoActivity extends Activity {
 
     //variable Declaration
-    TextView infoTextView;
+    protected static TextView infoTextView;
+    protected static Button homeButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_info);
         //Initialization
-        infoTextView=(TextView)findViewById(R.id.infoTextView);
+        infoTextView=(TextView)findViewById(R.id.info_text_view);
+        homeButton=(Button)findViewById(R.id.info_home_button);
         //Set scrolling property
         infoTextView.setMovementMethod(LinkMovementMethod.getInstance());
+
+        //Set Onclick method on homeButton to load Home page
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homePageIntent=new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(homePageIntent);
+            }
+        });
     }
 
 
 
-    //Loads MainActivity page
-    public void rsrHomePageLoad(View view){
-        Intent i=new Intent(this,MainActivity.class);
-        startActivity(i);
-    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

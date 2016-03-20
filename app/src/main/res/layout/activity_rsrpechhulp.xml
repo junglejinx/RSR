@@ -5,26 +5,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.learning.suman.rsr.RSRpechhulp"
     >
-<Button
+    <!--load home page button-->
+    <Button
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/RSRHomeButton"
-    android:onClick="rsrHomePageLoadPechhulpPage"
+    android:id="@+id/RSR_home_button"
     android:drawableLeft="@mipmap/arrowbtn"
-    android:text="RSR Pechhulp"
-    android:background="#ff1ea1ff"
-    android:gravity="left|center_vertical"
-    android:drawablePadding="-10dp"
-    android:textColor="#ffffff" />
+    android:drawableStart="@mipmap/arrowbtn"
+    android:text="@string/home_btn_text"
+    android:background="@color/button_color"
+    android:gravity="start|center_vertical"
+    android:drawablePadding="@dimen/RSR_home_page_btn_drawable_padding"
+    android:textColor="@color/white_text" />
 
+<!--fragment displaying map-->
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="385dp"
-    android:layout_height="520dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:id="@+id/map"
     tools:context="com.learning.suman.rsr.RSRpechhulp"
     android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_below="@+id/RSRHomeButton">
+    android:layout_below="@+id/RSR_home_button">
 
 </fragment>
 
@@ -33,56 +35,49 @@
         android:layout_height="wrap_content"
         android:gravity="center">
 
-        <Button
-            android:layout_width="120dp"
-            android:layout_height="100dp"
-            android:id="@+id/locnPopUpBtn"
-            android:background="@mipmap/locnpopup"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="130dp"
-            android:text="Uw locatie: Onthoud deze locatie for het telephinishgesprek "
-            android:textColor="#ffffff"
-            android:textSize="10dp"
-            android:textAlignment="gravity"
-            android:padding="2dp"
-            android:gravity="top|center_horizontal" />
-
+        <!--close dialog box button-->
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/Annuleren_btn_height"
             android:id="@+id/closeBtn"
-            android:text="X Annuleren"
-            android:layout_marginTop="255dp"
-            android:layout_marginLeft="23dp"
-            android:textColor="#ffffff"
-
+            android:text="@string/annuleren_text"
+            android:layout_marginTop="@dimen/Annuleren_margin_top"
+            android:layout_marginLeft="@dimen/Annuleren_margin_left"
+            android:layout_marginStart="@dimen/Annuleren_margin_left"
+            android:textColor="@color/white_text"
             android:visibility="invisible"
-            android:background="#ff1ea1ff" />
-        <!--android:drawableLeft="@mipmap/ic_closebtn"-->
+            android:background="@color/button_color" />
+
+        <!--dialog box text-->
         <TextView
-            android:layout_width="259dp"
-            android:layout_height="205dp"
-            android:text="@string/alert_msg"
-            android:layout_marginTop="300dp"
-            android:layout_marginLeft="23dp"
-            android:background="#661331ff"
+            android:layout_width="@dimen/message_width"
+            android:layout_height="@dimen/message_height"
+            android:text="@string/call_btn_msg"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/message_margin_top"
+            android:layout_marginLeft="@dimen/message_margin_left"
+            android:layout_marginStart="@dimen/message_margin_left"
+            android:background="@color/message_color"
             android:focusable="false"
-            android:textColor="#ffffff"
+            android:textColor="@color/white_text"
             android:visibility="invisible"
             android:id="@+id/msgTextView"
-            android:textSize="18dp" />
+            android:textSize="@dimen/big_text_size" />
 
+        <!--bel button-->
         <Button
-            android:layout_width="250dp"
+            android:layout_width="@dimen/message_width"
             android:layout_height="wrap_content"
             android:id="@+id/belRSRNuButton"
-            android:text="Bel RSR nu"
-            android:layout_marginTop="450dp"
-            android:background="#ff1ea1ff"
-            android:layout_marginLeft="25dp"
+            android:text="@string/bel_btn_text"
+            android:layout_marginTop="@dimen/bel_btn_margin_top"
+            android:background="@color/button_color"
+            android:layout_marginLeft="@dimen/bel_btn_margin_left"
+            android:layout_marginStart="@dimen/bel_btn_margin_left"
             android:drawableLeft="@mipmap/phonebtnsec"
+            android:drawableStart="@mipmap/phonebtnsec"
             android:gravity="center_vertical"
-            android:textColor="#FFFFFF" />
+            android:textColor="@color/white_text" />
 
 
 
